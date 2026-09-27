@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import { KeyboardAvoidingView, Platform, ScrollView, StyleSheet, TextInput, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Wordmark } from '@/components/Brand';
-import { Button, Card, Chip, Icon, Input, Text, useToast } from '@/components/ui';
+import { Button, Card, Chip, Icon, Input, LightStatusBar, Text, useToast } from '@/components/ui';
 import { colors, radius, spacing } from '@/constants/theme';
 import { demoUsers } from '@/data/mockData';
 import { ensureNotificationPermission } from '@/services/notifications';
@@ -52,6 +52,7 @@ export default function Login() {
 
   return (
     <View style={styles.root}>
+      <LightStatusBar />
       <SafeAreaView edges={['top']} style={styles.hero}>
         <Wordmark />
         <View style={{ gap: spacing.xs }}>

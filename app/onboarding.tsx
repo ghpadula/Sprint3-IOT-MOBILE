@@ -3,7 +3,7 @@ import { useRef, useState } from 'react';
 import { FlatList, Pressable, StyleSheet, useWindowDimensions, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Wordmark } from '@/components/Brand';
-import { Button, Icon, IconName, Text } from '@/components/ui';
+import { Button, Icon, IconName, LightStatusBar, Text } from '@/components/ui';
 import { colors, radius, spacing } from '@/constants/theme';
 import { useAuth } from '@/store/AuthContext';
 
@@ -44,6 +44,7 @@ export default function Onboarding() {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top', 'bottom']}>
+      <LightStatusBar />
       <View style={styles.top}>
         <Wordmark compact />
         <Pressable onPress={finish} hitSlop={12} accessibilityRole="button" testID="onboarding-skip">

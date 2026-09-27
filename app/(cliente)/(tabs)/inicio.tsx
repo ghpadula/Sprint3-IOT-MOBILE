@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { AlertItem } from '@/components/AlertItem';
 import { AppointmentCard } from '@/components/AppointmentCard';
 import { OfferCard } from '@/components/OfferCard';
-import { Badge, Button, Card, EmptyState, Icon, IconButton, IconName, ProgressBar, ScoreRing, SectionHeader, Text } from '@/components/ui';
+import { Badge, Button, Card, EmptyState, Icon, IconButton, IconName, LightStatusBar, ProgressBar, ScoreRing, SectionHeader, Text } from '@/components/ui';
 import { colors, radius, spacing } from '@/constants/theme';
 import { useApp } from '@/store/AppContext';
 import { useAuth } from '@/store/AuthContext';
@@ -38,6 +38,7 @@ export default function Home() {
 
   return (
     <ScrollView style={styles.root} contentContainerStyle={{ paddingBottom: spacing.huge }} showsVerticalScrollIndicator={false}>
+      <LightStatusBar />
       <SafeAreaView edges={['top']} style={styles.hero}>
         <View style={styles.heroTop}>
           <View style={{ flex: 1 }}>

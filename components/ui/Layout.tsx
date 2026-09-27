@@ -1,10 +1,22 @@
-import { router } from 'expo-router';
-import { ReactNode } from 'react';
+import { router, useFocusEffect } from 'expo-router';
+import { StatusBar } from 'expo-status-bar';
+import { ReactNode, useCallback, useState } from 'react';
 import { Pressable, RefreshControl, ScrollView, StyleSheet, View, ViewStyle, StyleProp } from 'react-native';
 import { SafeAreaView, Edge } from 'react-native-safe-area-context';
 import { colors, layout, radius, spacing } from '@/constants/theme';
 import { Icon, IconName } from './Icon';
 import { Text } from './Text';
+
+export function LightStatusBar() {
+  const [focused, setFocused] = useState(false);
+  useFocusEffect(
+    useCallback(() => {
+      setFocused(true);
+      return () => setFocused(false);
+    }, []),
+  );
+  return focused ? <StatusBar style="light" /> : null;
+}
 
 type ScreenProps = {
   children: ReactNode;

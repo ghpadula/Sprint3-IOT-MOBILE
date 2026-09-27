@@ -3,7 +3,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Wordmark } from '@/components/Brand';
 import { CustomerRow } from '@/components/CustomerRow';
-import { BarChart, Card, ErrorState, Icon, IconName, LoadingList, SectionHeader, Text, TrendLine } from '@/components/ui';
+import { BarChart, Card, ErrorState, Icon, IconName, LightStatusBar, LoadingList, SectionHeader, Text, TrendLine } from '@/components/ui';
 import { colors, radius, riskColors, spacing } from '@/constants/theme';
 import { dealers, vinShareHistory } from '@/data/mockData';
 import { MODEL } from '@/ml/churnModel';
@@ -50,6 +50,7 @@ export default function Painel() {
 
   return (
     <ScrollView style={{ flex: 1, backgroundColor: colors.background }} contentContainerStyle={{ paddingBottom: spacing.huge }}>
+      <LightStatusBar />
       <SafeAreaView edges={['top']} style={styles.hero}>
         <Wordmark compact />
         <View style={{ gap: 2 }}>
