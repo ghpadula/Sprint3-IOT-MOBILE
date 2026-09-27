@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Typecheck
+        run: npx tsc --noEmit
+      - name: Lint
+        run: npx eslint . --max-warnings=0
+      - name: Auditoria de dependências (SCA, relatório)
+        continue-on-error: true
+        run: npm audit --omit=dev --audit-level=critical
+      - name: Bundle Android (valida que o app compila)
+        run: npx expo export --platform android --output-dir /tmp/export
