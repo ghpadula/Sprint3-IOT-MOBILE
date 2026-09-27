@@ -7,7 +7,7 @@ Evolução do app **Ford Care+** (Sprint 2), agora integrado à proposta complet
 |---|---|
 | 💻 **Repositório** | [github.com/ghpadula/Sprint3-IOT-MOBILE](https://github.com/ghpadula/Sprint3-IOT-MOBILE) |
 | 📦 **APK (Android)** | **[Baixar a versão mais recente](https://github.com/ghpadula/Sprint3-IOT-MOBILE/releases/latest)** (GitHub Releases) |
-| 🎬 **Vídeo de demonstração** | [YouTube (não listado)](https://youtu.be/COLE_O_LINK_AQUI) |
+| 🎬 **Vídeo de demonstração** | [Video](https://fiapcom-my.sharepoint.com/:v:/g/personal/rm554907_fiap_com_br/IQDTzef22SAwSazOwpvVfWyWAcXDfWFDIMDDgqBgnkNLN6Q?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=9SgIaX) |
 | 🔑 **Acesso de demonstração** | Cliente `cliente@fordconecta.com` · Concessionária `consultor@fordconecta.com` · senha `ford2026` (também há atalhos na tela de login) |
 
 ---
